@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+/* ------------------------nav----------------------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding: 7px 35px;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+nav .bx {
+    display: none;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding-inline-start: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 5px;
+    padding: 10px 20px;
+}
+a:hover {
+    background-color: rgba(128, 128, 128, 0.414);
+}
+.logo span {
+    font-weight: bold;
+}
+/* ----------------------image------------------------ */
+.img {
+    height: 90vh;
+    position: relative;
+    background-image: url(image/architect.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img img {
+    width: 100%;
+}
+.img h1 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font-size: 40px;
+    color: white;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+.img h1 span {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 5px 18px;
+    width: max-content;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.792);
+}
+/* ----------------------------projects---------------------- */
+.projects h2 {
+    margin-bottom: 50px;
+    padding: 25px 0;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.282);
+    font-size: 25px;
+}
+.gallary {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.gallary .project {
+    width: 24%;
+    position: relative;
+}
+.project img {
+    width: 100%;
+}
+.project p {
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    width: 40%;
+    text-align: center;
+}
+/* ----------------------------about---------------------------- */
+.about .article {
+    margin: 20px 0 50px 0;
+}
+.about > h2 {
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.282);
+    padding: 25px 0;
+    font-size: 25px;
+}
+.about .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.cards .card {
+    width: 24%;
+}
+.card img {
+    width: 100%;
+}
+
+.card > * {
+    margin-bottom: 15px;
+}
+.card :nth-child(3) {
+    margin: 20px 0;
+}
+.card :nth-child(3) {
+    opacity: 0.5;
+}
+.about p {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.card button {
+    width: 100%;
+    font-size: 16px;
+    border-style: none;
+    padding: 10px 0;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+/* -----------------------contact--------------------------- */
+.contact > h2 {
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.282);
+    padding: 25px 0;
+    font-size: 25px;
+}
+.contact p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.contact input {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 8px;
+    border: 0.5px solid gray;
+}
+.contact button {
+    margin-top: 20px;
+    font-size: 16px;
+    border-style: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.contact button:hover {
+    background-color: rgba(128, 128, 128, 0.4);
+    color: black;
+}
+
+/* ---------------------------map---------------------------- */
+.map {
+    margin-bottom: 5px;
+}
+.map img {
+    width: 100%;
+}
+/* --------------------------footer -----------------------------*/
+footer {
+    background-color: black;
+    color: white;
+    padding: 33px 0;
+    text-align: center;
+}
+/* ---------------------small devices-------------------------- */
+@media (max-width: 450px) {
+    /* ------------------------nav----------------------- */
+    nav ul {
+        display: none;
+    }
+    nav .bx {
+        display: block;
+    }
+    nav ul {
+        display: none;
+    }
+    /* ----------------------image------------------------ */
+    .img {
+        width: 100%;
+        height: 25vh;
+    }
+    .img h1 {
+        top: 60%;
+        left: 20%;
+        font-size: 15px;
+    }
+    /* ----------------------------projects---------------------- */
+    .gallary {
+        flex-direction: column;
+    }
+    .gallary .project {
+        width: 100%;
+    }
+
+    /* ----------------------------about---------------------------- */
+    .about .cards {
+        flex-direction: column;
+    }
+    .cards .card {
+        width: 100%;
+    }
+}
+/* ---------------------------medium devices ------------------- */
+@media (min-width: 451px) and (max-width: 1249px) {
+    /* ----------------------image------------------------ */
+    .img {
+        width: 100%;
+        height: 35vh;
+    }
+    .img h1 {
+        top: 50%;
+        left: 30%;
+    }
+    /* ----------------------------projects---------------------- */
+    .gallary {
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .gallary .project {
+        width: 49%;
+    }
+
+    /* ----------------------------about---------------------------- */
+    .cards .card {
+        width: 49%;
+    }
+    .about .cards {
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
